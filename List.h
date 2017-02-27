@@ -24,6 +24,7 @@ class List //begin List definition
      //... fill in ....
      int clear();
      int display();
+     int getAt(int k);
 };//end List definition
 
 #endif
