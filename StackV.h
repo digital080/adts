@@ -9,7 +9,7 @@ using namespace std;
 class Stack
 {
 private:
-
+	  int first = 0;
       vector<int> data;
   
 

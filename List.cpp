@@ -29,6 +29,7 @@ int List::size()
 
 void List::insert(int val, int k)
 {
+	cout << "Val: " << val << " K: " << k << " Num of Elements: " << num_elements << endl;
 	if (k < 1 or k > num_elements +1) //if the location is invalid
 	     throw out_of_range("List::insertAt(...)");//throw an "out_of_range" exception
 	
@@ -105,7 +106,7 @@ void List::remove(int k)
 
 	int List::display(){
 
-	for(Node* travPtr = frontPtr; travPtr != nullPtr; travPtr = travPtr -> link){
+	for(Node* travPtr = frontPtr; travPtr != nullptr; travPtr = travPtr -> link){
 	
 		cout << travPtr -> data << endl;
 		

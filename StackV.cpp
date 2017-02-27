@@ -6,46 +6,58 @@
 using namespace std;
 
 
-void Stack::push(int k){
-  
-  for(int x = 0; x < k; x++){
-  data[x].push(k);
-    }
-  }
 
 
 
 int Stack::size(){
 
-  return num_elements;
+  return data.size();
 }
+
+int Stack::top(){
+	if(data.size() == 0){
+		cout << "Stack is empty!" << endl;
+		
+		return -1;
+		}
+	}
+
+void Stack::push(int k){
+int w = data.size();
+  
+  if (first == k){
+	  
+	  first++;
+	  data[first] = k;
+	  }else {
+  
+  for(int x = 0; x < data.size(); x++){
+	  
+			first++;
+		}//endfor
+	}//endif
+  }//end block
 
 
 void Stack::pop(){
-  int x = 0;
+	//if(top > 0){
+	
+  first--;
+	/*}else{
+	//	cout << "Stack is emtpy!" << endl;
+	}*/
   
-  while(x < data.size()){//increment x to the last element in the list
-  x++
-   }
-  
-  data[x].pop();
-
   }
 
 void Stack::clear(){
   int loc = 0;
   while(loc != data.size()){
-    pop(1);
+   // data[0].pop();
     loc++;
   }
 }
 
-void Stack::top(){
-  for(int x = 0; x < data.size(); x++){
-    
-    cout << data[x] << endl;
-  
-  
-  }
 
-}
+	
+
+
