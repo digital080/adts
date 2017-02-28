@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <string.h>
 
 using namespace std;
 
@@ -15,44 +16,50 @@ int Stack::size(){
 }
 
 int Stack::top(){
-	if(data.size() == 0){
+	int track = 0;
+	
+	if(data.size() <= 0){
 		cout << "Stack is empty!" << endl;
 		
 		return -1;
-		}
+		
+		}else{
+				for(int x = 0; x < data.size(); x++){
+				track++;
+			}
+			cout << data[track] << endl;
+			return 0; 
+			
+			}
+		
 	}
 
 void Stack::push(int k){
-int w = data.size();
-  
-  if (first == k){
-	  
-	  first++;
-	  data[first] = k;
-	  }else {
-  
-  for(int x = 0; x < data.size(); x++){
-	  
-			first++;
-		}//endfor
-	}//endif
+ 
+	  data.push_back(k);
+
   }//end block
 
 
 void Stack::pop(){
-	//if(top > 0){
+
 	
-  first--;
-	/*}else{
-	//	cout << "Stack is emtpy!" << endl;
-	}*/
+	if(data.size() > 0){
+		data.pop_back();
+		
+	}else{
+		
+		cout << "Stack is emtpy!" << endl;
+		
+	}
   
   }
 
 void Stack::clear(){
-  int loc = 0;
+  int loc = 1;
+  
   while(loc != data.size()){
-   // data[0].pop();
+		data.pop_back();
     loc++;
   }
 }
