@@ -1,5 +1,6 @@
 //With a (raw) linked-list 
-
+#include <iostream>
+using namespace std;
 #ifndef STACK_H
 #define STACK_H
 

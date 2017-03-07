@@ -24,11 +24,11 @@ int Stack::top(){
 		return -1;
 		
 		}else{
-				for(int x = 0; x < data.size(); x++){
+				for(int x = 0; x < data.size()-1; x++){
 				track++;
 			}
-			cout << data[track] << endl;
-			return 0; 
+			cout << "Current top of Stack: " << data[track] << endl;
+			return data[track]; 
 			
 			}
 		
@@ -38,18 +38,19 @@ void Stack::push(int k){
  
 	  data.push_back(k);
 
+
   }//end block
 
 
 void Stack::pop(){
 
 	
-	if(data.size() > 0){
-		data.pop_back();
+	if(data.size() <= 0){
+		cout << "Stack is emtpy!" << endl;
 		
 	}else{
+		data.pop_back();
 		
-		cout << "Stack is emtpy!" << endl;
 		
 	}
   
